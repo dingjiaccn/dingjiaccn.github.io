@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiacheng Ding — Resume</title>
+  <meta name="description" content="Resume of Jiacheng Ding — PhD Candidate in Genomics (single-cell; wet & dry lab).">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#5a5a5a;
+      --link:#0a66c2;
+      --rule:#222222;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .wrap{max-width:900px; margin:0 auto; padding:28px 22px 72px}
+    /* Header layout with photo */
+    .header-grid{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:16px;
+      align-items:center;
+    }
+    @media(max-width:560px){
+      .header-grid{ grid-template-columns: 1fr; gap:10px; }
+      .avatar{ margin-top:6px; }
+    }
+    h1{
+      font-size:clamp(28px, 4vw, 36px);
+      line-height:1.15;
+      margin:0 0 6px 0;
+      font-weight:700;
+      letter-spacing:.2px;
+      color:#000;
+    }
+    .contact{
+      display:flex; flex-wrap:wrap; gap:10px 16px;
+      color:var(--muted); font-size:15px
+    }
+    .contact a{color:var(--link); text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    /* Photo styles */
+    .avatar{
+      width:120px; height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid #222;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+      background:#eee;
+    }
+    .rule{height:1.5px; background:var(--rule); margin:18px 0 10px}
+    section{margin:10px 0 0}
+    h2{
+      font-size:clamp(18px, 2.2vw, 20px);
+      text-transform:uppercase;
+      margin:10px 0 6px;
+      color:#000;
+      font-weight:700;
+      letter-spacing:.08em;
+    }
+    h3{
+      font-size:16px;
+      margin:0;
+      font-weight:600;
+      color:#000;
+    }
+    .meta{color:var(--muted); font-size:14px; margin:2px 0 8px}
+    p{margin:6px 0; font-size:15px}
+    ul{margin:6px 0 8px 18px; padding:0; font-size:15px}
+    li{margin:6px 0}
+    .grid-2{display:grid; grid-template-columns:1fr; gap:6px 22px}
+    @media(min-width:740px){ .grid-2{grid-template-columns:1fr 1fr;} }
+    footer{margin-top:24px; color:var(--muted); font-size:12px}
+    @media print{
+      .wrap{padding:0}
+      .contact a{color:#000; text-decoration:none}
+      body{font-size:11pt}
+      h1{font-size:18pt}
+      h2{font-size:12.5pt}
+      h3{font-size:11pt}
+      .rule{margin:8px 0}
+      footer{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="header-grid">
+      <div>
+        <h1>JIACHENG DING</h1>
+        <div class="contact">
+          <span><a href="mailto:jiachengd@arizona.edu">jiachengd@arizona.edu</a></span>
+          <span><a href="tel:+12132556885">(213) 255-6885</a></span>
+          <span><a href="https://linkedin.com/in/jiachengd" target="_blank" rel="noopener">linkedin.com/in/jiachengd</a></span>
+          <span><a href="https://github.com/dingjiaccn" target="_blank" rel="noopener">github.com/dingjiaccn</a></span>
+        </div>
+      </div>
+      <!-- Replace headshot.jpg with your image file name; keep the same path as index.html -->
+      <img class="avatar" src="headshot.jpg" alt="Headshot of Jiacheng Ding">
+    </header>
+
+    <div class="rule"></div>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Single-cell genomics researcher with 5 years of combined assay development and computational analysis on large scale datasets. Build analytical pipelines delivering both QC and biological insights facilitating technology development and translational medicine studies.</p>
+    </section>
+
+    <div class="rule"></div>
+    <section id="skills">
+      <h2>Core Skills</h2>
+      <div class="grid-2">
+        <div>
+          <ul>
+            <li><strong>Wet lab &amp; Platforms:</strong> scRNA-seq, scATAC-seq, scMultiome library construction &amp; quality controls; 10x Genomics Chromium; molecular biology (FACS, PCR, Western blot); Illumina NextSeq 500/550, NovaSeq, MiSeq</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><strong>Dry lab tools:</strong> R/RStudio, Python, Bash, High Performance Computing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <h3>Graduate Student Researcher — Cusanovich Lab, University of Arizona, Dept. of Cellular &amp; Molecular Medicine</h3>
+        <div class="meta">2020–present</div>
+        <ul>
+          <li>Developed a high-throughput scRNA-seq method achieving ~5× higher throughput than 10x Genomics Chromium with reduced per-cell cost; validated on 293T and NIH/3T3 cell lines.</li>
+          <li>Built “mTEA-seq,” a user-friendly scMultiome (RNA+ATAC) workflow, increasing throughput for ~2x and lowering per-sample cost; validated via computational simulation and human PBMCs.</li>
+          <li>Applied mTEA-seq at population scale to an insulin-defined asthma endotype (75 samples, 54 donors): integrated RNA/ATAC, performed genotyping from single-cell data, mapped cis-QTLs, and linked variants to chromatin accessibility and transcriptional changes.</li>
+          <li>Extended to early-life asthma origins (42 infants), identifying environment-associated immune signatures with integrated scRNA-seq and scATAC-seq analyses.</li>
+          <li>Cross-project analytics: supported within- and cross-lab studies; standardized QC, batch correction, and data integration workflows; built and implemented Slurm-based pipeline.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Graduate Student Researcher — Lu Lab, University of Southern California, Dept. of Pharmacy</h3>
+        <div class="meta">2019–2020</div>
+        <ul>
+          <li>Established chromatin-associated RNA fractionation/enrichment for interaction/structure assays; validated products with Bioanalyzer and qPCR.</li>
+          <li>Performed molecular engineering: primer design, plasmid construction, Cas9/gRNA efficiency testing, gel electroporation; derived monoclonal cell lines.</li>
+          <li>Assisted in constructing a double-knockout human iPSC line.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Undergraduate Researcher — Liu Lab, Sichuan University, Dept. of Chemical Engineering</h3>
+        <div class="meta">2016–2017</div>
+        <ul>
+          <li>Evaluated myricetin effects on tyrosinase activity using L-DOPA substrate; performed UV–vis kinetic analyses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>PhD, Genomics (expected Feb 2026), University of Arizona — Thesis: Single-cell Genomics Study of Early-Life Asthma Risk</li>
+        <li>MS, Pharmaceutical Science (2018–2020), University of Southern California — Thesis: Cellular Fractionation and PARIS for Chromatin-associated RNAs</li>
+        <li>BS, Pharmaceutical Engineering (2013–2017), Sichuan University — Thesis: Effects of Myricetin on Tyrosinase Kinetics</li>
+      </ul>
+    </section>
+
+    <div class="rule"></div>
+    <section id="publications">
+      <h2>Publications &amp; Conferences (selected)</h2>
+      <ul>
+        <li>eLife (2024): Adelus ML, Ding J, Tran BT, et al. Single-cell ‘omic profiles of human aortic endothelial cells in vitro and human atherosclerotic lesions ex vivo reveal heterogeneity of endothelial subtype and response to activating perturbations.</li>
+        <li>Manuscript: Ding J, Kang HJ, Spangenberg AL, et al. An Optimized, Multiplexed, Single-cell Multiome Approach Supports an Insulin-Driven Asthma Subtype.</li>
+        <li>Manuscript: Ding J, Kang HJ, et al. Single-Cell Genomics Study of the Binational Early Asthma and Microbiome Study Cohort</li>
+        <li>ASHG Poster (2024); Research Day Poster (2024).</li>
+      </ul>
+    </section>
+
+    <div class="rule"></div>
+    <section id="awards">
+      <h2>Awards &amp; Service</h2>
+      <ul>
+        <li>Inspire Award, USC School of Pharmacy (2019) — outstanding leadership outside the classroom.</li>
+        <li>Outstanding Volunteer, School of Chemical Engineering, Sichuan University (2014).</li>
+        <li>Teaching Assistant, CMM 523: Single-cell Genomics Analysis for Biologists (2025).</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="rule"></div>
+      <p>© Jiacheng Ding. Print this page to save as PDF.</p>
+    </footer>
+  </main>
+</body>
+</html>
